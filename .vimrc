@@ -1,3 +1,5 @@
+" disables annoying visual mode when pasting
+set mouse-=a
 syntax on
 filetype on
 filetype indent plugin on
