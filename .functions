@@ -1,4 +1,10 @@
+# maven
+mvn(){
+  docker run -it --rm --name maven -v "$(pwd)":/usr/src/mymaven -v ~/.m2:/root/.m2 -w /usr/src/mymaven maven:3.6.3-openjdk-15 mvn "$@"
+}
+
 # mysql client
 mysql(){
   docker run -it ruanbekker/mysql-client "$@"
 }
+
