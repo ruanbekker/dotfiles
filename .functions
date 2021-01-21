@@ -1,3 +1,8 @@
+# aws-cli
+aws(){
+  docker run --rm -it -e AWS_DEFAULT_REGION=eu-west-1 -v ~/.aws/credentials:/root/.aws/credentials ruanbekker/awscli aws "$@"
+}
+
 # maven
 mvn(){
   docker run -it --rm --name maven -v "$(pwd)":/usr/src/mymaven -v ~/.m2:/root/.m2 -w /usr/src/mymaven maven:3.6.3-openjdk-15 mvn "$@"
