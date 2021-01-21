@@ -13,3 +13,7 @@ mysql(){
   docker run -it ruanbekker/mysql-client "$@"
 }
 
+# vpn: aws-default-vpc
+vpn_aws_vpc(){
+  sshuttle -r eu-west-1.aws.jump-host 172.31.0.0/16
+}
