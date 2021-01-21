@@ -3,6 +3,13 @@ aws(){
   docker run --rm -it -e AWS_DEFAULT_REGION=eu-west-1 -v ~/.aws/credentials:/root/.aws/credentials ruanbekker/awscli aws "$@"
 }
 
+# aws-ssh
+aws-ssh(){
+  instance_name=${1}
+  instance_id=$(aws --profile prod ec2 describe-instances --filter "Name=tag:Name,Values=${instance_name}" --query "Reservations[].Instances[?State.Name == 'running'].InstanceId[]" --output text)
+  aws --profile prod ssm start-session --target ${instance_id}
+}
+
 # maven
 mvn(){
   docker run -it --rm --name maven -v "$(pwd)":/usr/src/mymaven -v ~/.m2:/root/.m2 -w /usr/src/mymaven maven:3.6.3-openjdk-15 mvn "$@"
