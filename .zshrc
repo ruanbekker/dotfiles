@@ -56,6 +56,11 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+# https://unix.stackexchange.com/questions/273861/unlimited-history-in-zsh
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -95,3 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export GOPATH=~/go
+export GOBIN=~/go/bin
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=${PATH}:${GOPATH}/bin:${GOROOT}/bin
