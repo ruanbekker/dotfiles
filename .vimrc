@@ -39,7 +39,8 @@ let base16colorspace=256  " Access colors present in 256 colorspace"
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
 set background=dark
 colorscheme delek
-set number
+" line numbers
+" set number 
 set autoindent " automatically set indent of new line
 set smartindent
 set laststatus=2 " show the satus line all the time
