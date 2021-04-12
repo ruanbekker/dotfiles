@@ -24,3 +24,8 @@ mysql(){
 vpn_aws_vpc(){
   sshuttle -r eu-west-1.aws.jump-host 172.31.0.0/16
 }
+
+# vpn: home
+vpn_home(){
+  sshuttle -r home-bastion 192.168.0.0/24
+}
