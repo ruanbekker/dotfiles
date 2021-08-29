@@ -33,6 +33,10 @@ set nolazyredraw " don't redraw while executing macros
 set magic " Set magic on, for regex
 set showmatch " show matching braces
 set mat=2 " how many tenths of a second to blink
+
+" autoindent rules for yaml
+autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 syntax on
 set encoding=utf8
 let base16colorspace=256  " Access colors present in 256 colorspace"
