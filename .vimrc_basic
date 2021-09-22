@@ -1,4 +1,4 @@
-colorscheme ${VIM_COLOR_THEME:-default}
+colorscheme ${VIM_COLOR_THEME}
 syntax on
 set mouse-=a
 
