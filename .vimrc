@@ -34,9 +34,24 @@ set magic " Set magic on, for regex
 set showmatch " show matching braces
 set mat=2 " how many tenths of a second to blink
 
+" recognize .txt extension as being human-language text
+augroup filetype
+  autocmd BufNewFile,BufRead *.txt set filetype=human
+augroup END
+
+" set indentation to 2 spaces
+autocmd FileType lua,nginx,sh set shiftwidth=2 softtabstop=2
+
+" set indentation to 4 spaces
+autocmd FileType html,xhtml,css,xml,xslt,python set shiftwidth=4 softtabstop=4
+
+" in makefiles, don't expand tabs to spaces
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
+
 " autoindent rules for yaml
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
 syntax on
 set encoding=utf8
 let base16colorspace=256  " Access colors present in 256 colorspace"
