@@ -1,5 +1,6 @@
 # aliases
 New-Alias k kubectl
+New-Alias kns kubens
 
 # starship
 $ENV:STARSHIP_CONFIG = "$HOME\.config\starship.toml"
