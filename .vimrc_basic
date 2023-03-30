@@ -1,15 +1,25 @@
-colorscheme ${VIM_COLOR_THEME}
+" enable filetype detection:
+filetype on
+filetype plugin off
+filetype indent off
+
+" configure syntax and theme
 syntax on
+colorscheme molokai
+
+" disable paste visual mode
 set mouse-=a
 
-filetype on
-filetype indent plugin on
-set noexpandtab " tabs ftw
-set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
-set tabstop=4 " the visible width of tabs
-set softtabstop=4 " edit as if the tabs are 4 characters wide
-set shiftwidth=4 " number of spaces to use for indent and unindent
-set shiftround " round indent to a multiple of 'shiftwidth'
+" recognize .txt extension as being human-language text
+augroup filetype
+  autocmd BufNewFile,BufRead *.txt set filetype=human
+augroup END
 
-autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+" set indentation to 2 spaces
+autocmd FileType lua,nginx,sh set shiftwidth=2 softtabstop=2
+
+" set indentation to 4 spaces
+autocmd FileType html,xhtml,css,xml,xslt,python set shiftwidth=4 softtabstop=4
+
+" in makefiles, don't expand tabs to spaces
+autocmd FileType make set noexpandtab shiftwidth=8 softtabstop=0
