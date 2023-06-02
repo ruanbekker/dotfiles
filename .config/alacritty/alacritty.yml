@@ -1,0 +1,22 @@
+# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+env:
+  FOO: bar
+
+# themes: https://github.com/catppuccin/alacritty
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+  #- ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+  #- ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+  #- ~/.config/alacritty/catppuccin/catppuccin-latte.yml
+
+# https://sunnnychan.github.io/cheatsheet/linux/config/alacritty.yml.html
+window:
+  title: Alacritty
+  # adds blank space around the window measured in pixels
+  padding:
+    x: 6
+    y: 6
+  opacity: 0.95
+
+font:
+  size: 14.0
