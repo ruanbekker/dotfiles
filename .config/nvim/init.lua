@@ -1,6 +1,9 @@
 -- Typecraft:
 -- https://youtu.be/zHTeCSVAFNY?si=WJTndTwm01buRMdB
 
+-- Requirements:
+-- nvim, gcc, npm
+
 -- Plugins:
 -- https://github.com/nvim-telescope/telescope.nvim
 -- https://github.com/catppuccin/nvim
