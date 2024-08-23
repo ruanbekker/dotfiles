@@ -3,3 +3,17 @@ alias backup_sync='rsync -av --exclude=".cache/*" --exclude="snap/*" --exclude="
 
 # tar backup
 alias backup_tar="tar -zcvf ~/backups/laptop-backup-$(date +%F).tar.gz ~/.ssh/config ~/personal ~/workspace ~/Documents ~/Desktop"
+
+# docker
+alias dsdf='docker system df'
+alias dsp='docker system prune'
+
+# kubernetes
+alias k=kubectl
+alias krun='kubectl run -it --rm debug-pod --image=ruanbekker/containers:curl -- /bin/sh'
+alias klogs='kubectl logs -f'
+alias kcx=kubectx
+alias kns=kubens
+
+# git
+alias wow='git status -s'
