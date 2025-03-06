@@ -3,6 +3,11 @@
 
 -- Requirements:
 -- nvim, gcc, npm
+-- Install nvim:
+-- curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+-- sudo tar -C /usr/local -xzf nvim-linux-x86_64.tar.gz
+-- sudo mv /usr/local/nvim-linux-x86_64 /usr/local/nvim
+-- export PATH="$PATH:/usr/local/nvim/bin"
 
 -- Plugins:
 -- https://github.com/nvim-telescope/telescope.nvim
